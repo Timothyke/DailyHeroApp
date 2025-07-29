@@ -1,49 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:padding="24dp"
     android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity"
     android:background="@android:color/white">
 
     <TextView
-        android:id="@+id/welcomeText"
+        android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to DailyHero"
-        android:textSize="22sp"
+        android:text="DailyHero App"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#222222"
-        android:layout_marginBottom="24dp" />
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/signInBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign in with Google"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:icon="@drawable/ic_google"
-        app:iconPadding="8dp"
-        app:iconGravity="textStart"
-        android:layout_marginBottom="16dp" />
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/signOutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
         android:id="@+id/btnAddTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New Task"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        style="@style/Widget.MaterialComponents.Button" />
+        android:text="Add Task"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnViewTasks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View Tasks"
-        android:layout_marginTop="8dp"
-        style="@style/Widget.MaterialComponents.Button" />
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
