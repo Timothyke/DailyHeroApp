@@ -1,27 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:padding="24dp"
-    android:gravity="center"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
-    <Button
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to DailyHero"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/signInBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign in with Google" />
+        android:text="Sign in with Google"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:icon="@drawable/ic_google"
+        app:iconPadding="8dp"
+        app:iconGravity="textStart"
+        android:layout_marginBottom="16dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Task"
-        android:layout_marginTop="16dp" />
+        android:text="Add New Task"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        style="@style/Widget.MaterialComponents.Button" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnViewTasks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View Tasks"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
 </LinearLayout>
